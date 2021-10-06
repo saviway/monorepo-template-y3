@@ -1,0 +1,25 @@
+{
+  "name": "pkg-b",
+  "version": "0.0.1",
+  "author": "Ivan Savi",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/pkg-b.umd.js",
+  "module": "./dist/pkg-b.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pkg-b.es.js",
+      "require": "./dist/pkg-b.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "vite": "^2.6.3",
+    "vite-plugin-dts": "^0.8.2"
+  }
+}

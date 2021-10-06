@@ -1,0 +1,28 @@
+{
+  "name": "pkg-a",
+  "version": "0.0.1",
+  "author": "Ivan Savi",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/pkg-a.umd.js",
+  "module": "./dist/pkg-a.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/pkg-a.es.js",
+      "require": "./dist/pkg-a.umd.js"
+    }
+  },
+  "dependencies": {
+    "nanoid": "^3.1.29"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "vite": "^2.6.3",
+    "vite-plugin-dts": "^0.8.2"
+  }
+}
